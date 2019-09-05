@@ -47,5 +47,5 @@ function result() {
     }
     console.log(newStory);
     story.textContent = newStory;
-    story.styke.visibility = 'visible';
+    story.style.visibility = 'visible';
 }

@@ -19,6 +19,7 @@ randomize.addEventListener('click', result);
 
 //Story Generation
 function result() {
+    console.log('is this working');
     let newStory = storyText;
     //Select random entries from Arrays
     let xItem = randomValueFromArray(insertX);
@@ -26,10 +27,10 @@ function result() {
     let zItem = randomValueFromArray(insertZ);
      
     //Place random entries into story
-    newStory = newStory.replace(':insertX:', xItem);
-    newStory = newStory.replace(':insertX:', xItem);
-    newStory = newStory.replace(':insertY:', yItem);
-    newStory = newStory.replace(':insertZ:', zItem);
+    newStory = newStory.replace(':insertx:', xItem);
+    newStory = newStory.replace(':insertx:', xItem);
+    newStory = newStory.replace(':inserty:', yItem);
+    newStory = newStory.replace(':insertz:', zItem);
     
     //Custom Name Setup
     if(customName.value !== '') {
@@ -44,7 +45,7 @@ function result() {
         newStory = newStory.replace('94 fahrenheit', temperature);
         newStory = newStory.replace('300 pounds', weight);
     }
-
+    console.log(newStory);
     story.textContent = newStory;
-    story.getElementsByClassName.visibilty = 'visible';
+    story.styke.visibility = 'visible';
 }
